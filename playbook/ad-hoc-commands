@@ -1,0 +1,86 @@
+
+ # ansible all -m command -a "date"
+ # ansible all -m command -a "free -h"
+ # ansible all -m command -a  "yum install tree -y"
+ # ansible all -m yum -a "name=httpd state=absent"
+ # ansible all -m yum -a "name=httpd state=present"
+ # ansible client2 -m yum -a "name=httpd state=present"
+ # ansible all -m command -a "yum install tree -y"
+ # ansible all -m yum -a "name=tree state=present"
+ # echo "hello all" > sample.txt
+ # ls
+ # ansible all -m copy -a 'src=sample.txt   dest=/tmp/sample.txt'
+ # ansible all -m command -a 'cat /tmp/sample.txt'
+ # ansible all -m copy -a 'content = "unnati class"  dest= /tmp/sample.txt'
+
+-----------------------   this all are the ansible Adhoc commands ------------------------------
+
+
+ -m module 
+ -a   attribute
+ -C check only check it not compile the yaml file check for error only dry-run
+  ansible-doc   copy 
+  andible-doc  firewall 
+     within ansible doc there are examples aslo for that search  /EXAMPLE
+  --v   helps to increase  the verbosity  of logs 
+
+==============================================================================================
+
+
+ It is push based mechanism work on ansible 
+ ansible work parallel execution 
+ ansible don't have client software 
+ ansible controller - ansible managed host
+ Inventry - it stores ip address  -> to give instruction  
+  vi /etc/ansible/hosts  it stores a host ip address
+touch dir -> modification time change , time stamp change
+ls -l 
+
+yaml , json -> script used on node that is playbook
+list of all host inventery 
+
+ Ad-hoc command - one time execution 
+     for temperory used only 
+ user RHEL  SYSTEM ROLE - ansible lab 
+  linux command 
+ ansible - module - corn yum , rpm , cp , command  
+             - m -> module - command , yum , rpm ,
+             - a - attribute -> executed  content , file 
+
+ change+succesful = orange 
+ successful = green 
+ unsuccessful= red
+ 
+ absent - delete , present - install , create - touch } file 
+ free -h - memory 
+ ICMP - protocal -> ping -pong to host to  check the host is reachable 
+
+usr/bin/ - other user can access 
+usr/sbin/ - only root user , has access 
+
+ In scenario 
+ # subscription-manager repos --list   - get the ansible repo ID 
+ # subscription-manager repos --enable  <ansible-repo-ID>
+ # yum install ansible -y
+ # vi /etc/ansible/hosts     - create group  [ansible_client]
+                                                                   <host-ip>
+ # ansible all --list     - host ip list 
+ # cat /etc/ansible/hosts 
+ # ansible all -m ping    - check the host are reachable in network
+ # ansible all -m command -a "date"
+ # ansible all -m command -a "free -h"
+ # ansible all -m command -a  "yum install tree -y"
+ # ansible all -m yum -a "name=httpd state=absent"
+ # ansible all -m yum -a "name=httpd state=present"
+ # ansible client2 -m yum -a "name=httpd state=present"
+ # ansible all -m command -a "yum install tree -y"
+ # ansible all -m yum -a "name=tree state=present"
+ # echo "hello all" > sample.txt
+ # ls
+ # ansible all -m copy -a 'src=sample.txt   dest=/tmp/sample.txt'
+ # ansible all -m command -a 'cat /tmp/sample.txt'
+ # ansible all -m copy -a 'content = "unnati class"  dest= /tmp/sample.txt'
+
+-----------------------   this all are the ansible Adhoc commands ------------------------------
+
+
