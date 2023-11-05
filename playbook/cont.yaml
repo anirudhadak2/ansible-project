@@ -1,0 +1,17 @@
+---
+- name: Run httpd container
+  hosts: all
+  become: yes  # This is used to become the root user on the target host
+  tasks:
+    - name: Pull the httpd image from Docker Hub
+      docker_image:
+        name: docker.io/httpd:latest  # Replace with the desired tag (e.g., specific version)
+        state: present
+
+    - name: Run the httpd container
+      docker_container:
+        name: my_httpd_container  # Replace with the desired container name
+        image: docker.io/httpd:latest  # Replace with the desired tag (e.g., specific version)
+        ports:
+          - "80:80"  # Map host port 80 to container port 80
+        detach: yes  # Run the container in detached mode (in the background)
