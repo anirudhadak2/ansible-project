@@ -1,0 +1,18 @@
+# This playbook will install nginx and start nginx
+# become : yes is giving sudo permission to install 
+---
+- name: host web
+  hosts: ansible_client 
+
+  name: Install nginx
+  become: yes
+  tasks:
+   - name: nginx Installer
+     apt:
+       name: nginx
+       state: latest 
+   - name: nginx start
+     service:
+        name: nginx
+        state: started
+        enabled: yes
