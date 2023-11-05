@@ -1,0 +1,16 @@
+---
+ - name: sample book
+   hosts: ansible_client
+   tasks:
+     - name: install  nginx
+       apt:
+           name: nginx
+           state: latest
+     - name: run  nginx
+       service:
+               name: nginx
+               state: started
+     - name: create content 
+       copy: 
+            content: "Hello This is anirudha here !.."   
+            dest: /usr/share/nginx/html/index.html 
