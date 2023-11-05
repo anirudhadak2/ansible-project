@@ -1,0 +1,23 @@
+---
+- name: Run httpd container and copy index.html
+  hosts:  all
+  become: yes  # This is used to become the root user on the target host
+  tasks:
+    - name: Pull the httpd image from Docker Hub
+      docker_image:
+        name: docker.io/httpd:latest  # Replace with the desired tag (e.g., specific version)
+        state: present
+
+    - name: Run the httpd container
+      docker_container:
+        name: my_httpd_container1  # Replace with the desired container name
+        image: docker.io/httpd:latest  # Replace with the desired tag (e.g., specific version)
+        ports:
+          - "18080:80"  # Map host port 80 to container port 80
+        detach: yes  # Run the container in detached mode (in the background)
+
+    - name: Copy index.html to the container
+      copy:
+        src: /root/test/index.html  # Replace with the path to your index.html file on the control node
+        dest:  /usr/local/apache2/htdocs/   # Destination path in the container
+  #    delegate_to: my_httpd_container1  # Run this task on the container, not the control node
