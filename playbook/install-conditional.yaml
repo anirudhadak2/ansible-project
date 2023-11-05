@@ -1,0 +1,16 @@
+---
+- name: host web
+  hosts: ansible_client 
+  name: This playbook will install based on OS
+  become: yes
+  tasks:
+    - name: Install Docker
+      apt:
+        name: docker.io
+        state: latest
+      when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+    - name: Install AWS CLI
+      yum:
+        name: awscli
+        state: latest
+      when: ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat Enterprise Linux'
