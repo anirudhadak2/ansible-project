@@ -1,0 +1,15 @@
+---
+- name: sample playbook 
+  hosts: ansible_client 
+  tasks:
+   - name: adding user
+     user:
+       name: samaial
+       state: absent
+- name: installing  apache2
+  hosts: ansible_client 
+  tasks: 
+   - name: install package
+     apt:
+      name: apache2
+      state: present
