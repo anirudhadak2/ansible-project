@@ -1,0 +1,19 @@
+---
+- name: sample playbook 
+  hosts: ansible_client 
+  tasks:
+   - name: adding user
+     user:
+       name: samaial
+       state: absent
+   - name: adding user
+     user:
+       name: amit
+       state: absent
+- name: installing   nginx
+  hosts: ansible_client 
+  tasks: 
+   - name: install package
+     apt:
+      name:  nginx
+      state: present
