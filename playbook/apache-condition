@@ -1,0 +1,12 @@
+---
+- name: host web
+  hosts: ansible_client  
+  become: true
+
+  tasks:
+  - name: Install apache
+    apt: 
+      name: apache2
+      state: latest
+
+    when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
