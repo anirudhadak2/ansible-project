@@ -1,0 +1,17 @@
+---
+- name: host web
+  hosts: ansible_client 
+  tasks:
+   - name: install apache2
+     apt: 
+      name: apache2
+      state: present
+   - name: start apache2
+     service: 
+      name: apache2
+      state: started
+      enabled: true
+   - name: adding index.html  
+     copy:
+      content: "Hello unnati anirusha here  !"
+      dest: /var/www/html/index.html
