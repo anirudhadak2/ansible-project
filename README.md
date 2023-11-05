@@ -27,10 +27,6 @@
 
 
 
-[![Image](https://github.com/anirudhadak2/ansible-project/blob/main/playbook/4.png)
-
-
-
 
 [![Image](https://github.com/anirudhadak2/ansible-project/blob/main/playbook/5.png)
 
@@ -47,43 +43,7 @@
 
 
 
-[![Image](https://github.com/anirudhadak2/ansible-project/blob/main/playbook/8.png)
 
-
-
-[![Image](https://github.com/anirudhadak2/ansible-project/blob/main/playbook/9.png)
-
-
-[![Image](https://github.com/anirudhadak2/ansible-project/blob/main/playbook/10.png)
-
-
-
-[![Image](https://github.com/anirudhadak2/ansible-project/blob/main/playbook/11.png)
-
-
-
-[![Image](https://github.com/anirudhadak2/ansible-project/blob/main/playbook/12.png)
-
-
-
-[![Image](https://github.com/anirudhadak2/ansible-project/blob/main/playbook/13.png)
-
-
-
-
-[![Image](https://github.com/anirudhadak2/ansible-project/blob/main/playbook/14.png)
-
-
-
-
-[![Image](https://github.com/anirudhadak2/ansible-project/blob/main/playbook/15.png)
-
-
-
-[![Image](https://github.com/anirudhadak2/ansible-project/blob/main/playbook/16.png)
-
-
-[![Image](https://github.com/anirudhadak2/ansible-project/blob/main/playbook/17.png)
 
 
 
