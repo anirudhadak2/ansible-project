@@ -7,5 +7,5 @@ https://github.com/anirudhadak2/ansible-project.git
 playbook/Understanding-Ansible-Architecture-using-diagram1.png
 
 
-[![Image](https://github.com/anirudhadak2/ansible-project.git/blob/main/playbook/Understanding-Ansible-Architecture-using-diagram1.png)
+[![Image](https://github.com/anirudhadak2/ansible-project.git/blob/main/ansible-project/playbook/Understanding-Ansible-Architecture-using-diagram1.png)
 
