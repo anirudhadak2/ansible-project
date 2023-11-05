@@ -1,0 +1,7 @@
+---
+- name: host web
+  hosts: ansible_client   
+  name: Date playbook
+  tasks:
+    - name: This will show the date
+      command: date
